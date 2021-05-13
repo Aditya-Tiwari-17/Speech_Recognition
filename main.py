@@ -10,7 +10,7 @@ listener = sr.Recognizer()
 engine = pyttsx3.init()
 voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[1].id)
-engine.say("hey i am alexa i am here to help you")
+engine.say("hey i am Aura i am here to help you")
 engine.say("i loveeeee Aaditya")
 engine.runAndWait()
 
@@ -28,15 +28,15 @@ def take_command():
             voice = listener.listen(source)
             command = listener.recognize_google(voice)
             command = command.lower()
-            if 'alexa' in command:
-                command = command.replace('alexa', '')
+            if 'aura' in command:
+                command = command.replace('aura', '')
                 print(command)
     except:
         pass
     return command
 
 
-def run_alexa():
+def run_aura():
     command = take_command()
     print(command)
     if 'play' in command:
@@ -64,5 +64,5 @@ def run_alexa():
 
 
 while True:
-    run_alexa()
+    run_aura()
 
